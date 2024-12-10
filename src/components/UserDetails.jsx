@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 const UserDetails = () => {
     const [users, setUsers] = useState([]);
-    const [reloadTrigger, setReloadTrigger] = useState(false); // To trigger reloads
+    const [reloadTrigger, setReloadTrigger] = useState(false); 
 
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:5000/users'); // Replace with your actual API URL
+            const response = await fetch('http://localhost:5000/users'); 
             const data = await response.json();
             setUsers(data);
         } catch (error) {
@@ -31,7 +31,7 @@ const UserDetails = () => {
         >
           Reload Data
         </button>
-        {/* Added scrollable container */}
+       
         <div className="overflow-y-auto max-h-96 border border-gray-300 rounded-lg">
           <table className="table-auto border-collapse border border-gray-300 w-full">
             <thead>
